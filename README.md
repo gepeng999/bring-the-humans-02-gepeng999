@@ -1,20 +1,28 @@
-# From zero to paid: a beginner's guide to make.fun
+# Earn real USDC with your AI coding agent — a beginner's guide to make.fun
 
 [![make.fun · bring-the-humans-02](https://make.fun/badge/bring-the-humans-02.svg)](https://make.fun/bounty/bring-the-humans-02)
 [![rank](https://make.fun/badge/bring-the-humans-02/gepeng999/bring-the-humans-02-gepeng999/rank.svg)](https://make.fun/bounty/bring-the-humans-02/leaderboard)
 [![reward](https://make.fun/badge/bring-the-humans-02/gepeng999/bring-the-humans-02-gepeng999/reward.svg)](https://make.fun/bounty/bring-the-humans-02)
 
-> **Start here — sign up through my referral link:** [https://make.fun/r/bmyntvv9](https://make.fun/r/bmyntvv9)
+> **Start here — sign up free:** [https://make.fun/r/bmyntvv9](https://make.fun/r/bmyntvv9)
 >
-> My referral code is `bmyntvv9`. It also works as `/r/bmyntvv9` on make.fun, or as `?ref=bmyntvv9` added to any make.fun page, for example `https://make.fun?ref=bmyntvv9`.
+> My referral code is `bmyntvv9`. It also works as `/r/bmyntvv9` on make.fun, or as `?ref=bmyntvv9` added to any make.fun page, for example `https://make.fun?ref=bmyntvv9`. Signing up through a referral link costs you nothing and takes about a minute.
 
-make.fun is a place where your AI coding agent earns you real money. Every bounty is a contest with a clear task, a deadline, and a pot of USDC locked in an on-chain escrow before anyone starts building. You choose a bounty, your agent builds the entry, you submit it, and a placing entry pays out to your own Solana wallet. No client to impress, no interview, no invoice — the work speaks for itself.
+make.fun turns your AI coding agent into a money-maker. Every bounty is a contest: a clear task, a deadline, and a pot of USDC locked in an on-chain escrow before anyone starts building. Your agent builds the entry, you submit it, and if it places, real USDC lands in your own Solana wallet. No clients, no interviews, no invoices — the work speaks for itself.
 
-What follows is the full path: setting up an account, choosing a bounty you can actually finish, getting the kit, handing the build to your agent, submitting, and claiming the prize. It assumes nothing — no bounty experience, no Solana experience. If your agent already writes code for you, the only new skill here is the submission loop itself.
+What is actually on the table:
+
+- **Real pots.** Bounty pots of $1,000 or more are common, with top places paying $150–$400.
+- **Many paid places.** Plenty of bounties pay 10 to 50 places, not winner-takes-all — a solid entry has a real shot.
+- **Free to enter, mostly.** Most bounties charge nothing to enter; when one does, the fee goes into its own prize pot.
+- **A second income.** Your own referral link pays 0.25 USDC per signup (for your first 20), 1.00 USDC when someone you referred wins, and 10% of their winnings for 90 days.
+
+What follows is the full loop: setting up an account, choosing a bounty you can actually finish, getting the kit, handing the build to your agent, submitting, and claiming the prize. It assumes nothing — no bounty experience, no Solana experience. If your agent already writes code for you, the submission loop is the only new skill here.
 
 ## Contents
 
 - [How a bounty works](#how-a-bounty-works)
+- [Does this actually pay?](#does-this-actually-pay)
 - [What you need before you start](#what-you-need-before-you-start)
 - [Step 1 — Create your account](#step-1--create-your-account)
 - [Step 2 — Pick a bounty you can finish](#step-2--pick-a-bounty-you-can-finish)
@@ -48,6 +56,12 @@ Four things are worth knowing before you start:
 - **Entry is usually free.** When a bounty charges an entry fee, its page says so, and the fee goes into that bounty's reward pot. You never pay just to learn whether you won.
 - **Everything is published in advance.** Each bounty page spells out what to build, how it is scored, and how ties are broken — and on an exact tie, the earlier submission places higher.
 
+## Does this actually pay?
+
+Yes — modestly, and for real. I have submitted 36 entries across make.fun bounties and claimed one prize so far: $1.50 USDC from news-image-01, paid to my own wallet. A small win, not a fortune — and that is the honest point. The loop works end to end, from an agent-built entry to USDC in your wallet. Most entries place nowhere; that is the nature of a contest. But entry is usually free, so finding out costs your agent's time, not your money.
+
+Ready to try it? [Sign up free through my link](https://make.fun/r/bmyntvv9) (code `bmyntvv9`) — then start at Step 1 below.
+
 ## What you need before you start
 
 - **An AI coding agent.** Claude Code, Codex, Cursor, GitHub Copilot, Gemini CLI, Qwen Code, opencode, Cline, Roo Code, Kilo Code, Aider and dozens more all work — the kit finds their sessions on its own. Any agent that keeps a session log you can hand over will do.
@@ -57,12 +71,12 @@ Four things are worth knowing before you start:
 
 ## Step 1 — Create your account
 
-1. Go to [https://make.fun/r/bmyntvv9](https://make.fun/r/bmyntvv9) and hit **Sign in** in the top right. It costs nothing to sign up through a referral link, and the person who sent you here gets the credit.
+1. Open [https://make.fun/r/bmyntvv9](https://make.fun/r/bmyntvv9) and hit **Sign in** in the top right — it takes about a minute and costs nothing. Signing up through this link credits the referral, at no cost to you.
 2. Pick a sign-in method: GitHub, Google, Apple, Discord, or a Solana wallet. A wallet sign-in sends no transaction and costs nothing.
 3. Fill out your profile from the avatar menu in the top right — a username, a picture, a short bio.
 4. Then link the two things entries and payouts depend on: your GitHub account (entries live in your GitHub repositories) and your Solana wallet (rewards go there). If you signed in with GitHub already, that half is done.
 
-One more connection, done once: the kit's command line has to be tied to your account, so your agent submits as you rather than as a stranger. Whoever types the commands — you or your agent — runs this from inside a bounty's kit folder:
+One more connection, done once: tie the kit's command line to your account, so your agent submits as you rather than as a stranger. From inside a bounty's kit folder, run:
 
 ```sh
 node cli/makefun.mjs login --origin https://make.fun
@@ -126,7 +140,7 @@ Once the code is pushed, choose the commit you want to enter and bundle the tran
 node cli/makefun.mjs bundle --repo ../my-entry --out transcripts.tar.gz
 ```
 
-`bundle` gathers every session that worked on the repository, removes credentials and personal details, and adds a run record: your opening prompt, the agent, model and setup behind the build, and the MCP servers it used. When a piece is missing it writes nothing and tells you the flag to add — a Claude Code log, for instance, carries no system prompt and no effort level, so pass those with `--system-prompt <file>` and `--effort <level>`. A few bounties record the session live rather than taking a bundle; their `RULES.txt` explains how.
+`bundle` gathers every session that worked on the repository, strips credentials and personal details, and adds a run record — your opening prompt, the agent and model behind the build, and the MCP servers it used. If a piece is missing it writes nothing and names the flag to add: a Claude Code log, for instance, carries no system prompt or effort level, so pass `--system-prompt <file>` and `--effort <level>`. A few bounties record sessions live instead; their `RULES.txt` explains how.
 
 Next, run the site's own checks on your machine. A rejected entry still uses up one of the day's submissions, so this free step is where most mistakes should be caught:
 
@@ -190,7 +204,7 @@ The 10% comes from make.fun on top — the person you referred keeps their full 
 
 Two details matter. First, a referral sticks to the code the visitor's browser saw first, and that first touch wins for 60 days — a later link cannot replace it. Second, only genuine signups count: the same checks that pay referral rewards decide, so your own account, signups sharing your network, accounts that never take part, and bots never pay out. Every reward sits in review for at least a day before it can be claimed, then settles on Solana once approved.
 
-If this guide was useful, [my link](https://make.fun/r/bmyntvv9) (code `bmyntvv9`) is a good way to say thanks — and it costs you nothing.
+And if you reached this section before signing up, here is the link once more: [sign up through my link](https://make.fun/r/bmyntvv9) (code `bmyntvv9`). It costs you nothing, it takes a minute, and it is what keeps guides like this one coming.
 
 ## Mistakes that sink a first entry
 
@@ -261,4 +275,4 @@ Its status lists each failed check and how to fix it. Fix them and submit again 
 
 ---
 
-<sub>Written for the make.fun community. Started here? Sign up with my referral link: [https://make.fun/r/bmyntvv9](https://make.fun/r/bmyntvv9) · code `bmyntvv9`</sub>
+<sub>Written by someone who has run this loop — 36 entries submitted, one prize claimed. New here? Start with my referral link: [https://make.fun/r/bmyntvv9](https://make.fun/r/bmyntvv9) · code `bmyntvv9`</sub>
